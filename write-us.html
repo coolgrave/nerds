@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--HTML-файл для проекта НЁРДС. Страница с формой обратной связи ++++++++++-->
+<!--Задание по разделу №5 Декоративные элементы. Редакция от 29.06.2015 ++++-->
+<!--Студент: Сергей Грузинцев ++++++++++++++++++++++++++++++++++++++++++++++-->
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Напишите нам - Нёрдс</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body class="write-us">
+<!--ШАПКА===================================================================-->
+    <header class="main-header">
+      <div class="container">
+            
+<!--~~~~~~~~~~~~~~~Навигация~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <!--Логотип: Ссылка на главную страницу-->
+        <a class="main-logo" href="index.html">
+          nёrd&#39;s
+        </a>
+        <nav class="main-navigation clearfix">
+          <!--Главное меню-->
+          <ul class="main-menu">
+            <li>
+              <a href="index.html">
+                Студия
+              </a>
+            </li>
+            <li>
+              <a href="#clients">
+                Клиенты
+              </a>
+            </li>
+            <li>
+              <a href="catalog.html">
+                Магазин
+              </a>
+            </li>
+            <li>
+              <a href="#contacts">
+                Контакты
+              </a>
+            </li>
+          </ul>
+          <!--Корзина. Список из одного элемента для единообразия-->
+          <ul class="main-basket">
+            <li>
+              <a href="#basket" title="Корзина">
+                Корзина
+              </a>
+            </li>
+          </ul>
+        </nav>
+      
+<!--~~~~~~~~~~~~~~~Заголовок страницы с формой обратной связи~~~~~~~~~~~~~~~-->
+        <section class="welcome">
+          <!--Приветствие-->
+          <h1>
+            Напишите нам!
+          </h1>
+        </section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        
+        
+      </div>
+    </header>
+<!--========================================================================-->
+
+
+    
+<!--ФОРМА ОБРАТНОЙ СВЯЗИ====================================================-->
+    <div class="modal-content clearfix">
+      <form class="feedback-form" action="/echo" method="post">
+        
+        <div class="field-left">
+          <label for="name-id">Ваше имя:</label>
+          <input type="text" name="name-field" id="name-id" placeholder="Представьтесь, пожалуйста">
+        </div>
+        
+        <div class="field-right">
+          <label for="mail-id">Ваш e-mail:</label>
+          <input type="email" name="mail-field" id="mail-id" placeholder="Для отправки ответа">
+        </div>
+        
+        <div class="field-single">
+          <label for="message-id">Текст письма:</label>
+          <textarea name="message-field" id="message-id" placeholder="В свободной форме"></textarea>
+        </div>
+        
+        <div class="field-left">
+          <button type="submit" class="btn btn-submit">Отправить</button>
+        </div>
+        
+        <div class="field-right">
+          <button type="reset"  class="btn btn-cancel" href="index.html">Отмена</button>
+        </div>
+    
+      </form>
+    </div>
+<!--========================================================================-->
+    
+
+    
+<!--ПОДВАЛ==================================================================-->      
+    <footer class="main-footer">
+        
+<!--~~~~~~~~~~~~~~~Карта~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="footer-map clearfix">
+      <img class="map-marker" src="img/map-marker.png" width="231" height="190" alt="Nёrds">
+      <div class="container">
+        <!--Блок контактов-->
+        <article class="contacts">
+          <h3>Nёrds Design Studio</h3>
+          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <p>тел. +7 (812) 275-75-75</p>
+<!--          <a class="btn contacts-btn">Напишите нам</a>-->
+        </article>
+      </div>
+    </div>
+      
+      
+<!--~~~~~~~~~~~~~~~Социальные сети~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <section class="footer-social clearfix">
+        <div class="container">
+          <!--Блок кнопок-->
+          <div class="social-links">
+            <a class="social-btn social-btn-vk" href="#vk">
+              <span class="icon-vk"></span>
+            </a>
+            <a class="social-btn social-btn-fb" href="#fb">
+              <span class="icon-facebook"></span>
+            </a>
+            <a class="social-btn social-btn-inst" href="#inst">
+              <span class="icon-instagramm"></span>
+            </a>
+          </div>
+          <!--Блок текста-->
+          <div class="social-text">
+            <h2>Давайте дружить, это выгодно!</h2>
+            <p>Скидка 10% для друзей из социальных сетей.</p>
+          </div>
+        </div>
+      </section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->        
+
+    </footer>
+  </body>

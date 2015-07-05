@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!--HTML-файл для проекта НЁРДС. Страница каталога +++++++++++++++++++++++++-->
+<!--Задание по разделу №5 Декоративные элементы. Редакция от 29.06.2015 ++++-->
+<!--Студент: Сергей Грузинцев ++++++++++++++++++++++++++++++++++++++++++++++-->
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог - Нёрдс</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body class="catalog">
+<!--ШАПКА===================================================================-->
+    <header class="main-header">
+      <div class="container">
+        
+<!--~~~~~~~~~~~~~~~Навигация~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <!--Логотип: Ссылка на главную страницу-->
+        <a class="main-logo" href="index.html">
+          nёrd&#39;s
+        </a>
+        <nav class="main-navigation clearfix">
+          <!--Главное меню-->
+          <ul class="main-menu">
+            <li>
+              <a href="index.html">
+                Студия
+              </a>
+            </li>
+            <li>
+              <a href="#clients">
+                Клиенты
+              </a>
+            </li>
+            <li>
+              <a class="current" href="catalog.html">
+                Магазин
+              </a>
+            </li>
+            <li>
+              <a href="#contacts">
+                Контакты
+              </a>
+            </li>
+          </ul>
+          <!--Корзина. Список из одного элемента для единообразия-->
+          <ul class="main-basket">
+            <li>
+              <a href="#basket" title="Корзина">
+                Корзина
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+<!--~~~~~~~~~~~~~~~Заголовок страницы каталога~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <section class="welcome">
+          <!--Приветствие-->
+          <h1>
+            Добро пожаловать в магазин готовых макетов
+          </h1>
+        </section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        
+      </div>
+    </header>
+<!--========================================================================-->
+    
+
+    
+<!--ОСНОВНОЙ РАЗДЕЛ=========================================================-->
+    <div class="container main-container clearfix">
+      
+<!--~~~~~~~~~~~~~~~Фильтр по товарам~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <aside class="filter">
+        <form action="/echo" method="post">
+          
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Стоимость (ползунки выбора мин и макс цены)-->
+          <fieldset class="filter-price">
+            <h2>
+              Стоимость:
+            </h2>
+            <div class="range-controls">
+              <div class="scale"><div class="bar"></div></div>
+              <div class="toggle min-toggle"></div>
+              <div class="toggle max-toggle"></div>
+            </div>
+            <div class="price-controls clearfix">
+              <div class="price-from">
+                от<input class="min-price" type="text" name="filter-price-min" value="0">
+              </div>
+              <div class="price-to">
+                до<input class="max-price" type="text" name="filter-price-max" value="15 000">
+              </div>
+            </div>
+          </fieldset>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Сетка (группа радиокнопок)~~~~~~~~~~~~~~~~~-->
+          <fieldset class="filter-grid">
+            <h2>
+              Сетка:
+            </h2>
+            <ul>
+              <li>
+                <input type="radio" id="grid1" name="grid-selector" value="grid1" checked>
+                <label for="grid1">Адаптивная</label>
+              </li>
+              <li>
+                <input type="radio" id="grid2" name="grid-selector" value="grid2">
+                <label for="grid2">Фиксированная</label>
+              </li>
+              <li>
+                <input type="radio" id="grid3" name="grid-selector" value="grid3" disabled>
+                <label for="grid3">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Особенности (группа чекбоксов)~~~~~~~~~~~~~-->
+          <fieldset class="filter-spec">
+            <h2>
+              Особенности:
+            </h2>
+            <ul>
+              <li>
+                <input type="checkbox" id="spec1" name="filter-spec-1" checked>
+                <label for="spec1">Слайдер</label>
+              </li>
+              <li>
+                <input type="checkbox" id="spec2" name="filter-spec2">
+                <label for="spec2">Блок преимуществ</label>
+              </li>
+              <li>
+                <input type="checkbox" id="spec3" name="filter-spec3" checked disabled>
+                <label for="spec3">Новости</label>
+              </li>
+              <li>
+                <input type="checkbox" id="spec4" name="filter-spec4" disabled>
+                <label for="spec4">Галерея</label>
+              </li>
+              <li>
+                <input type="checkbox" id="spec5" name="filter-spec5">
+                <label for="spec5">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          
+          <!--Кнопка отправки формы-->
+          <input class="btn" type="submit" value="Показать">
+          
+        </form>
+      </aside>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~Список товаров~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <section class="showcase">
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Сортировка по типам~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div class="showcase-sort clearfix">
+            <h2>Сортировать:</h2>
+            <ul class="sort-kind">
+              <li>
+                <a href="#price">По цене</a>
+              </li>
+              <li>
+                <a class="current" href="#type">По типу</a>
+              </li>
+              <li>
+                <a href="#func">По функционалу</a>
+              </li>
+            </ul>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Направление сортировки~~~~~~~~~~~~~~~~~~~~~-->
+              <ul class="sort-direct clearfix">
+                <li>
+                  <a class="icon-down-dir current" href="#down"></a>
+                </li>
+                <li>
+                  <a class="icon-up-dir" href="#up"></a>
+                </li>
+              </ul>
+        </div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~Выдача: отобранные варианты макетов~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Макет 1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <article class="showcase-item">
+          <div class="item-label">
+            <div class="dots"></div>
+          </div>
+          <img src="img/catalog-item01.jpg" width="240" height="240" alt="Aviator">
+          <div class="item-panel">
+            <h2>Aviator</h2>
+            <p>Интернет-магазин с личным кабинетом</p>
+            <a class="btn" href="#aviator">10 000 р.</a>
+          </div>
+        </article>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Макет 2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <article class="showcase-item">
+          <div class="item-label">
+            <div class="dots"></div>
+          </div>
+          <img src="img/catalog-item02.jpg" width="240" height="240" alt="Sunset">
+          <div class="item-panel">
+            <h2>Sunset</h2>
+            <p>Промо-сайт с блоком преимуществ</p>
+            <a class="btn" href="#sunset">9 500 р.</a>
+          </div>
+        </article>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Макет 3~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <article class="showcase-item">
+          <div class="item-label">
+            <div class="dots"></div>
+          </div>
+          <img src="img/catalog-item03.jpg" width="240" height="240" alt="Forte">
+          <div class="item-panel">
+            <h2>Forte</h2>
+            <p>Автономная целевая страница</p>
+            <a class="btn" href="#forte">9 000 р.</a>
+          </div>
+        </article>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Макет 4~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <article class="showcase-item">
+          <div class="item-label">
+            <div class="dots"></div>
+          </div>
+          <img src="img/catalog-item04.jpg" width="240" height="240" alt="Marquee">
+          <div class="item-panel">
+            <h2>Marquee</h2>
+            <p>Лендинг</p>
+            <a class="btn" href="#marquee">8 500 р.</a>
+          </div>
+        </article>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Макет 5~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <article class="showcase-item">
+          <div class="item-label">
+            <div class="dots"></div>
+          </div>
+          <img src="img/catalog-item05.jpg" width="240" height="240" alt="Avenue">
+          <div class="item-panel">
+            <h2>Avenue</h2>
+            <p>Корпоративный портал</p>
+            <a class="btn" href="#avenue">8 000 р.</a>
+          </div>
+        </article>
+        
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Макет 6~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <article class="showcase-item">
+          <div class="item-label">
+            <div class="dots"></div>
+          </div>
+          <img src="img/catalog-item06.jpg" width="240" height="240" alt="Dovetail">
+          <div class="item-panel">
+            <h2>Dovetail</h2>
+            <p>Социальная сеть с преферансом и верстальщицами</p>
+            <a class="btn" href="#dovetail">7 500 р.</a>
+          </div>
+        </article>
+        
+<!--~~~~~~~~~~~~~~~Переключатель страниц~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div class="showcase-paginator">
+          <a class="btn current" href="#1">1</a>
+          <a class="btn" href="#2">2</a>
+          <a class="btn" href="#3">3</a>
+          <a class="btn" href="#next">Следующая</a>
+        </div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        
+      </section>
+    </div>
+<!--========================================================================-->
+    
+
+    
+<!--ПОДВАЛ==================================================================-->      
+    <footer class="main-footer">
+        
+<!--~~~~~~~~~~~~~~~Карта~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="footer-map clearfix">
+      <img class="map-marker" src="img/map-marker.png" width="231" height="190" alt="Nёrds">
+      <div class="container">
+        <div class="map-canvas" id="map-canvas"></div>
+        <article class="contacts">
+          <h3>Nёrds Design Studio</h3>
+          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <p>тел. +7 (812) 275-75-75</p>
+          <a class="btn contacts-btn" href="write-us.html">Напишите нам</a>
+        </article>
+      </div>
+    </div>
+      
+      
+<!--~~~~~~~~~~~~~~~Социальные сети~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <section class="footer-social clearfix">
+        <div class="container">
+          <!--Блок кнопок-->
+          <div class="social-links">
+            <a class="social-btn social-btn-vk" href="#vk">
+              <span class="icon-vk"></span>
+            </a>
+            <a class="social-btn social-btn-fb" href="#fb">
+              <span class="icon-facebook"></span>
+            </a>
+            <a class="social-btn social-btn-inst" href="#inst">
+              <span class="icon-instagramm"></span>
+            </a>
+          </div>
+          <!--Блок текста-->
+          <div class="social-text">
+            <h2>Давайте дружить, это выгодно!</h2>
+            <p>Скидка 10% для друзей из социальных сетей.</p>
+          </div>
+        </div>
+      </section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->        
+
+    </footer>
+<!--========================================================================-->  
+    
+    
+    
+<!--ФОРМА ОБРАТНОЙ СВЯЗИ====================================================-->
+    <div class="modal-content">
+      <div class="modal-content-close">закрыть</div>
+      <form class="feedback-form" action="/echo" method="post">
+        
+        <div class="field-left">
+          <label for="name-id">Ваше имя:</label>
+          <input type="text" name="name-field" id="name-id" placeholder="Представьтесь, пожалуйста">
+        </div>
+        
+        <div class="field-right">
+          <label for="mail-id">Ваш e-mail:</label>
+          <input type="email" name="mail-field" id="mail-id" placeholder="Для отправки ответа">
+        </div>
+        
+        <div class="field-single">
+          <label for="message-id">Текст письма:</label>
+          <textarea name="message-field" id="message-id" placeholder="В свободной форме"></textarea>
+        </div>
+        
+        <div class="field-left">
+          <button type="submit" class="btn btn-submit">Отправить</button>
+        </div>
+        
+        <div class="field-right">
+          <button type="reset"  class="btn btn-cancel">Отмена</button>
+        </div>
+    
+      </form>
+    </div>
+  
+<!--СКРИПТЫ=================================================================-->
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="js/script.min.js"></script>
+    
+  </body>
